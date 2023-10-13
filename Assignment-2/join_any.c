@@ -31,6 +31,7 @@ int main(int argc, char **argv) {
                 execlp("./task", "task", "3", NULL);
             } else {
                 printf("I'll wait for one!\n");
+                // wait for any child to finish
                 wait(NULL);
                 execlp("./task", "parent", "0", NULL);
             }
