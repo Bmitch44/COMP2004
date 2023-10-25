@@ -38,7 +38,7 @@ void *calculate_average(void *param) {
     for (int i = 0; i < num_elements; i++) {
         average += numbers[i];
     }
-    average = (float)average / num_elements;
+    average = average / num_elements;
     pthread_exit(0);
 }
 
